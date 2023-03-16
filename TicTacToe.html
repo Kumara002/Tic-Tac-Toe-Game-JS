@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./TicTacToe.css">
+    <title>Tic Tac Toe Game</title>
+</head>
+<body>
+    <h1> Tic Tac Toe Game </h2>
+    
+        <p>Player-1 "X"</p>
+        <p>Player-2 "O"</p>
+        </br>
+        </br>
+        <div class="box">
+            <div class="insideBox">
+                <input type="text" id="a1" onClick="Click1()" readonly >
+                <input type="text" id="a2" onClick="Click2()" readonly>
+                <input type="text" id="a3" onClick="Click3()" readonly>
+            </div>
+            <div  class="insideBox">
+                <input type="text" id="a4" onClick="Click4()" readonly>
+                <input type="text" id="a5" onClick="Click5()" readonly>
+                <input type="text" id="a6" onClick="Click6()" readonly>
+            </div>
+    
+            <div  class="insideBox"> 
+                <input type="text" id="a7" onClick="Click7()" readonly>
+                <input type="text" id="a8" onClick="Click8()" readonly>
+                <input type="text" id="a9" onClick="Click9()" readonly>
+            </div>
+    
+        </div>
+    
+    
+        <button onClick="Reset()" > RESET </button>
+</body>
+<script>
+    let flag=0;
+    
+    function Reset(){
+        location.reload();
+    }
+    
+    function Click1(){
+        if(flag==1){
+            document.getElementById("a1").value="O";
+            document.getElementById("a1").disabled="True";
+            flag=0
+        }else{
+            document.getElementById("a1").value="X";
+            document.getElementById("a1").disabled="True";
+            flag=1
+        }
+       
+        const a1=document.getElementById("a1").value
+        const a2=document.getElementById("a2").value
+        const a3=document.getElementById("a3").value
+        let a4=document.getElementById("a4").value
+        let a5=document.getElementById("a5").value
+        let a6=document.getElementById("a6").value
+        let a7=document.getElementById("a7").value
+        let a8=document.getElementById("a8").value
+        let a9=document.getElementById("a9").value
+   
+    if(((a1=="X")&&(a2=="X")&&(a3=="X")) || ((a4=="X")&&(a5=="X")&&(a6=="X")) || ((a7=="X")&&(a8=="X")&&(a9=="X")) 
+    || ((a1=="X")&&(a4=="X")&&(a7=="X")) || ((a2=="X")&&(a5=="X")&&(a8=="X"))  || ((a3=="X")&&(a6=="X")&&(a9=="X"))
+    || ((a1=="X")&&(a5=="X")&&(a9=="X")) || ((a7=="X")&&(a5=="X")&&(a3=="X")) ){
+        console.log("x won")
+        alert("X won")
+    }
+    else if(((a1=="O")&&(a2=="O")&&(a3=="O")) || ((a4=="O")&&(a5=="O")&&(a6=="O")) || ((a7=="O")&&(a8=="O")&&(a9=="O")) 
+    || ((a1=="O")&&(a4=="O")&&(a7=="O")) || ((a2=="O")&&(a5=="O")&&(a8=="O"))  || ((a3=="O")&&(a6=="O")&&(a9=="O"))
+    || ((a1=="O")&&(a5=="O")&&(a9=="O")) || ((a7=="O")&&(a5=="O")&&(a3=="O")) ){
+      
+        alert("O won")
+    }
+    
+    else if( (a1=="O" || a1=="X") && (a2=="O" || a2=="X") && (a3=="O" || a3=="X") &&
+             (a4=="O" || a4=="X") && (a5=="O" || a5=="X") && (a6=="O" || a6=="X") &&
+             (a7=="O" || a7=="X") && (a8=="O" || a8=="X") && (a9=="O" || a9=="X")) {
+
+                alert("Match Draw")
+    }
+    }
+    
+    function Click2(){
+        if(flag==1){
+            document.getElementById("a2").value="O";
+            document.getElementById("a2").disabled="True";
+            flag=0
+        }else{
+            document.getElementById("a2").value="X";
+            document.getElementById("a2").disabled="True";
+            flag=1
+        }
+        console.log(document.getElementById("a1").value)
+        const a1=document.getElementById("a1").value
+        const a2=document.getElementById("a2").value
+        const a3=document.getElementById("a3").value
+        let a4=document.getElementById("a4").value
+        let a5=document.getElementById("a5").value
+        let a6=document.getElementById("a6").value
+        let a7=document.getElementById("a7").value
+        let a8=document.getElementById("a8").value
+        let a9=document.getElementById("a9").value
+   
+    if(((a1=="X")&&(a2=="X")&&(a3=="X")) || ((a4=="X")&&(a5=="X")&&(a6=="X")) || ((a7=="X")&&(a8=="X")&&(a9=="X")) 
+    || ((a1=="X")&&(a4=="X")&&(a7=="X")) || ((a2=="X")&&(a5=="X")&&(a8=="X"))  || ((a3=="X")&&(a6=="X")&&(a9=="X"))
+    || ((a1=="X")&&(a5=="X")&&(a9=="X")) || ((a7=="X")&&(a5=="X")&&(a3=="X")) ){
+        console.log("x won")
+        alert("X won")
+    }
+    else if(((a1=="O")&&(a2=="O")&&(a3=="O")) || ((a4=="O")&&(a5=="O")&&(a6=="O")) || ((a7=="O")&&(a8=="O")&&(a9=="O")) 
+    || ((a1=="O")&&(a4=="O")&&(a7=="O")) || ((a2=="O")&&(a5=="O")&&(a8=="O"))  || ((a3=="O")&&(a6=="O")&&(a9=="O"))
+    || ((a1=="O")&&(a5=="O")&&(a9=="O")) || ((a7=="O")&&(a5=="O")&&(a3=="O")) ){
+      
+        alert("O won")
+    }
+    
+    else if( (a1=="O" || a1=="X") && (a2=="O" || a2=="X") && (a3=="O" || a3=="X") &&
+             (a4=="O" || a4=="X") && (a5=="O" || a5=="X") && (a6=="O" || a6=="X") &&
+             (a7=="O" || a7=="X") && (a8=="O" || a8=="X") && (a9=="O" || a9=="X")) {
+
+                alert("Match Draw")
+    }
+    }
+    function Click3(){
+        if(flag==1){
+            document.getElementById("a3").value="O";
+            document.getElementById("a3").disabled="True";
+            flag=0
+        }else{
+            document.getElementById("a3").value="X";
+            document.getElementById("a3").disabled="True";
+            flag=1
+        }
+        const a1=document.getElementById("a1").value
+        const a2=document.getElementById("a2").value
+        const a3=document.getElementById("a3").value
+        let a4=document.getElementById("a4").value
+        let a5=document.getElementById("a5").value
+        let a6=document.getElementById("a6").value
+        let a7=document.getElementById("a7").value
+        let a8=document.getElementById("a8").value
+        let a9=document.getElementById("a9").value
+   
+    if(((a1=="X")&&(a2=="X")&&(a3=="X")) || ((a4=="X")&&(a5=="X")&&(a6=="X")) || ((a7=="X")&&(a8=="X")&&(a9=="X")) 
+    || ((a1=="X")&&(a4=="X")&&(a7=="X")) || ((a2=="X")&&(a5=="X")&&(a8=="X"))  || ((a3=="X")&&(a6=="X")&&(a9=="X"))
+    || ((a1=="X")&&(a5=="X")&&(a9=="X")) || ((a7=="X")&&(a5=="X")&&(a3=="X")) ){
+        console.log("x won")
+        alert("X won")
+    }
+    else if(((a1=="O")&&(a2=="O")&&(a3=="O")) || ((a4=="O")&&(a5=="O")&&(a6=="O")) || ((a7=="O")&&(a8=="O")&&(a9=="O")) 
+    || ((a1=="O")&&(a4=="O")&&(a7=="O")) || ((a2=="O")&&(a5=="O")&&(a8=="O"))  || ((a3=="O")&&(a6=="O")&&(a9=="O"))
+    || ((a1=="O")&&(a5=="O")&&(a9=="O")) || ((a7=="O")&&(a5=="O")&&(a3=="O")) ){
+      
+        alert("O won")
+    }
+    
+    else if( (a1=="O" || a1=="X") && (a2=="O" || a2=="X") && (a3=="O" || a3=="X") &&
+             (a4=="O" || a4=="X") && (a5=="O" || a5=="X") && (a6=="O" || a6=="X") &&
+             (a7=="O" || a7=="X") && (a8=="O" || a8=="X") && (a9=="O" || a9=="X")) {
+
+                alert("Match Draw")
+    }
+    }
+    function Click4(){
+        if(flag==1){
+            document.getElementById("a4").value="O";
+            document.getElementById("a4").disabled="True";
+            flag=0
+        }else{
+            document.getElementById("a4").value="X";
+            document.getElementById("a4").disabled="True";
+            flag=1
+        }
+        const a1=document.getElementById("a1").value
+        const a2=document.getElementById("a2").value
+        const a3=document.getElementById("a3").value
+        let a4=document.getElementById("a4").value
+        let a5=document.getElementById("a5").value
+        let a6=document.getElementById("a6").value
+        let a7=document.getElementById("a7").value
+        let a8=document.getElementById("a8").value
+        let a9=document.getElementById("a9").value
+   
+    if(((a1=="X")&&(a2=="X")&&(a3=="X")) || ((a4=="X")&&(a5=="X")&&(a6=="X")) || ((a7=="X")&&(a8=="X")&&(a9=="X")) 
+    || ((a1=="X")&&(a4=="X")&&(a7=="X")) || ((a2=="X")&&(a5=="X")&&(a8=="X"))  || ((a3=="X")&&(a6=="X")&&(a9=="X"))
+    || ((a1=="X")&&(a5=="X")&&(a9=="X")) || ((a7=="X")&&(a5=="X")&&(a3=="X")) ){
+        console.log("x won")
+        alert("X won")
+    }
+    
+    else if(((a1=="O")&&(a2=="O")&&(a3=="O")) || ((a4=="O")&&(a5=="O")&&(a6=="O")) || ((a7=="O")&&(a8=="O")&&(a9=="O")) 
+    || ((a1=="O")&&(a4=="O")&&(a7=="O")) || ((a2=="O")&&(a5=="O")&&(a8=="O"))  || ((a3=="O")&&(a6=="O")&&(a9=="O"))
+    || ((a1=="O")&&(a5=="O")&&(a9=="O")) || ((a7=="O")&&(a5=="O")&&(a3=="O")) ){
+      
+        alert("O won")
+    }
+    
+    else if( (a1=="O" || a1=="X") && (a2=="O" || a2=="X") && (a3=="O" || a3=="X") &&
+             (a4=="O" || a4=="X") && (a5=="O" || a5=="X") && (a6=="O" || a6=="X") &&
+             (a7=="O" || a7=="X") && (a8=="O" || a8=="X") && (a9=="O" || a9=="X")) {
+
+                alert("Match Draw")
+    }
+    }
+    function Click5(){
+        if(flag==1){
+            document.getElementById("a5").value="O";
+            document.getElementById("a5").disabled="True";
+            flag=0
+        }else{
+            document.getElementById("a5").value="X";
+            document.getElementById("a5").disabled="True";
+            flag=1
+        }
+        const a1=document.getElementById("a1").value
+        const a2=document.getElementById("a2").value
+        const a3=document.getElementById("a3").value
+        let a4=document.getElementById("a4").value
+        let a5=document.getElementById("a5").value
+        let a6=document.getElementById("a6").value
+        let a7=document.getElementById("a7").value
+        let a8=document.getElementById("a8").value
+        let a9=document.getElementById("a9").value
+   
+    if(((a1=="X")&&(a2=="X")&&(a3=="X")) || ((a4=="X")&&(a5=="X")&&(a6=="X")) || ((a7=="X")&&(a8=="X")&&(a9=="X")) 
+    || ((a1=="X")&&(a4=="X")&&(a7=="X")) || ((a2=="X")&&(a5=="X")&&(a8=="X"))  || ((a3=="X")&&(a6=="X")&&(a9=="X"))
+    || ((a1=="X")&&(a5=="X")&&(a9=="X")) || ((a7=="X")&&(a5=="X")&&(a3=="X")) ){
+        console.log("x won")
+        alert("X won")
+    }
+    
+    else if(((a1=="O")&&(a2=="O")&&(a3=="O")) || ((a4=="O")&&(a5=="O")&&(a6=="O")) || ((a7=="O")&&(a8=="O")&&(a9=="O")) 
+    || ((a1=="O")&&(a4=="O")&&(a7=="O")) || ((a2=="O")&&(a5=="O")&&(a8=="O"))  || ((a3=="O")&&(a6=="O")&&(a9=="O"))
+    || ((a1=="O")&&(a5=="O")&&(a9=="O")) || ((a7=="O")&&(a5=="O")&&(a3=="O")) ){
+      
+        alert("O won")
+    }
+    
+    else if( (a1=="O" || a1=="X") && (a2=="O" || a2=="X") && (a3=="O" || a3=="X") &&
+             (a4=="O" || a4=="X") && (a5=="O" || a5=="X") && (a6=="O" || a6=="X") &&
+             (a7=="O" || a7=="X") && (a8=="O" || a8=="X") && (a9=="O" || a9=="X")) {
+
+                alert("Match Draw")
+    }
+    }
+    function Click6(){
+        if(flag==1){
+            document.getElementById("a6").value="O";
+            document.getElementById("a6").disabled="True";
+            flag=0
+        }else{
+            document.getElementById("a6").value="X";
+            document.getElementById("a6").disabled="True";
+            flag=1
+        }
+        const a1=document.getElementById("a1").value
+        const a2=document.getElementById("a2").value
+        const a3=document.getElementById("a3").value
+        let a4=document.getElementById("a4").value
+        let a5=document.getElementById("a5").value
+        let a6=document.getElementById("a6").value
+        let a7=document.getElementById("a7").value
+        let a8=document.getElementById("a8").value
+        let a9=document.getElementById("a9").value
+   
+    if(((a1=="X")&&(a2=="X")&&(a3=="X")) || ((a4=="X")&&(a5=="X")&&(a6=="X")) || ((a7=="X")&&(a8=="X")&&(a9=="X")) 
+    || ((a1=="X")&&(a4=="X")&&(a7=="X")) || ((a2=="X")&&(a5=="X")&&(a8=="X"))  || ((a3=="X")&&(a6=="X")&&(a9=="X"))
+    || ((a1=="X")&&(a5=="X")&&(a9=="X")) || ((a7=="X")&&(a5=="X")&&(a3=="X")) ){
+        console.log("x won")
+        alert("X won")
+    }
+    
+    else if(((a1=="O")&&(a2=="O")&&(a3=="O")) || ((a4=="O")&&(a5=="O")&&(a6=="O")) || ((a7=="O")&&(a8=="O")&&(a9=="O")) 
+    || ((a1=="O")&&(a4=="O")&&(a7=="O")) || ((a2=="O")&&(a5=="O")&&(a8=="O"))  || ((a3=="O")&&(a6=="O")&&(a9=="O"))
+    || ((a1=="O")&&(a5=="O")&&(a9=="O")) || ((a7=="O")&&(a5=="O")&&(a3=="O")) ){
+      
+        alert("O won")
+    }
+    
+    else if( (a1=="O" || a1=="X") && (a2=="O" || a2=="X") && (a3=="O" || a3=="X") && 
+             (a4=="O" || a4=="X") && (a5=="O" || a5=="X") && (a6=="O" || a6=="X") &&
+             (a7=="O" || a7=="X") && (a8=="O" || a8=="X") && (a9=="O" || a9=="X")) {
+
+                alert("Match Draw")
+    }
+    }
+    function Click7(){
+        if(flag==1){
+            document.getElementById("a7").value="O";
+            document.getElementById("a7").disabled="True";
+            flag=0
+        }else{
+            document.getElementById("a7").value="X";
+            document.getElementById("a7").disabled="True";
+            flag=1
+        }
+        const a1=document.getElementById("a1").value
+        const a2=document.getElementById("a2").value
+        const a3=document.getElementById("a3").value
+        let a4=document.getElementById("a4").value
+        let a5=document.getElementById("a5").value
+        let a6=document.getElementById("a6").value
+        let a7=document.getElementById("a7").value
+        let a8=document.getElementById("a8").value
+        let a9=document.getElementById("a9").value
+   
+    if(((a1=="X")&&(a2=="X")&&(a3=="X")) || ((a4=="X")&&(a5=="X")&&(a6=="X")) || ((a7=="X")&&(a8=="X")&&(a9=="X")) 
+    || ((a1=="X")&&(a4=="X")&&(a7=="X")) || ((a2=="X")&&(a5=="X")&&(a8=="X"))  || ((a3=="X")&&(a6=="X")&&(a9=="X"))
+    || ((a1=="X")&&(a5=="X")&&(a9=="X")) || ((a7=="X")&&(a5=="X")&&(a3=="X")) ){
+        console.log("x won")
+        alert("X won")
+    }
+    
+    else if(((a1=="O")&&(a2=="O")&&(a3=="O")) || ((a4=="O")&&(a5=="O")&&(a6=="O")) || ((a7=="O")&&(a8=="O")&&(a9=="O")) 
+    || ((a1=="O")&&(a4=="O")&&(a7=="O")) || ((a2=="O")&&(a5=="O")&&(a8=="O"))  || ((a3=="O")&&(a6=="O")&&(a9=="O"))
+    || ((a1=="O")&&(a5=="O")&&(a9=="O")) || ((a7=="O")&&(a5=="O")&&(a3=="O")) ){
+      
+        alert("O won")
+    }
+    
+    else if( (a1=="O" || a1=="X") && (a2=="O" || a2=="X") && (a3=="O" || a3=="X") && 
+             (a4=="O" || a4=="X") && (a5=="O" || a5=="X") && (a6=="O" || a6=="X") &&
+             (a7=="O" || a7=="X") && (a8=="O" || a8=="X") && (a9=="O" || a9=="X")) {
+
+                alert("Match Draw")
+    }
+    }
+    function Click8(){
+        if(flag==1){
+            document.getElementById("a8").value="O";
+            document.getElementById("a8").disabled="True";
+            flag=0
+        }else{
+            document.getElementById("a8").value="X";
+            document.getElementById("a8").disabled="True";
+            flag=1
+        }
+        const a1=document.getElementById("a1").value
+        const a2=document.getElementById("a2").value
+        const a3=document.getElementById("a3").value
+        let a4=document.getElementById("a4").value
+        let a5=document.getElementById("a5").value
+        let a6=document.getElementById("a6").value
+        let a7=document.getElementById("a7").value
+        let a8=document.getElementById("a8").value
+        let a9=document.getElementById("a9").value
+   
+    if(((a1=="X")&&(a2=="X")&&(a3=="X")) || ((a4=="X")&&(a5=="X")&&(a6=="X")) || ((a7=="X")&&(a8=="X")&&(a9=="X")) 
+    || ((a1=="X")&&(a4=="X")&&(a7=="X")) || ((a2=="X")&&(a5=="X")&&(a8=="X"))  || ((a3=="X")&&(a6=="X")&&(a9=="X"))
+    || ((a1=="X")&&(a5=="X")&&(a9=="X")) || ((a7=="X")&&(a5=="X")&&(a3=="X")) ){
+        console.log("x won")
+        alert("X won")
+    }
+    
+    else if(((a1=="O")&&(a2=="O")&&(a3=="O")) || ((a4=="O")&&(a5=="O")&&(a6=="O")) || ((a7=="O")&&(a8=="O")&&(a9=="O")) 
+    || ((a1=="O")&&(a4=="O")&&(a7=="O")) || ((a2=="O")&&(a5=="O")&&(a8=="O"))  || ((a3=="O")&&(a6=="O")&&(a9=="O"))
+    || ((a1=="O")&&(a5=="O")&&(a9=="O")) || ((a7=="O")&&(a5=="O")&&(a3=="O")) ){
+      
+        alert("O won")
+    }
+    
+    else if( (a1=="O" || a1=="X") && (a2=="O" || a2=="X") && (a3=="O" || a3=="X") && 
+             (a4=="O" || a4=="X") && (a5=="O" || a5=="X") && (a6=="O" || a6=="X") &&
+             (a7=="O" || a7=="X") && (a8=="O" || a8=="X") && (a9=="O" || a9=="X")) {
+
+                alert("Match Draw")
+    }
+    }
+    function Click9(){
+        if(flag==1){
+            document.getElementById("a9").value="O";
+            document.getElementById("a9").disabled="True";
+            flag=0
+        }else{
+            document.getElementById("a9").value="X";
+            document.getElementById("a9").disabled="True";
+            flag=1
+        }
+        const a1=document.getElementById("a1").value
+        const a2=document.getElementById("a2").value
+        const a3=document.getElementById("a3").value
+        let a4=document.getElementById("a4").value
+        let a5=document.getElementById("a5").value
+        let a6=document.getElementById("a6").value
+        let a7=document.getElementById("a7").value
+        let a8=document.getElementById("a8").value
+        let a9=document.getElementById("a9").value
+   
+    if(((a1=="X")&&(a2=="X")&&(a3=="X")) || ((a4=="X")&&(a5=="X")&&(a6=="X")) || ((a7=="X")&&(a8=="X")&&(a9=="X")) 
+    || ((a1=="X")&&(a4=="X")&&(a7=="X")) || ((a2=="X")&&(a5=="X")&&(a8=="X"))  || ((a3=="X")&&(a6=="X")&&(a9=="X"))
+    || ((a1=="X")&&(a5=="X")&&(a9=="X")) || ((a7=="X")&&(a5=="X")&&(a3=="X")) ){
+        console.log("x won")
+        alert("X won")
+    }
+    
+    else if(((a1=="O")&&(a2=="O")&&(a3=="O")) || ((a4=="O")&&(a5=="O")&&(a6=="O")) || ((a7=="O")&&(a8=="O")&&(a9=="O")) 
+    || ((a1=="O")&&(a4=="O")&&(a7=="O")) || ((a2=="O")&&(a5=="O")&&(a8=="O"))  || ((a3=="O")&&(a6=="O")&&(a9=="O"))
+    || ((a1=="O")&&(a5=="O")&&(a9=="O")) || ((a7=="O")&&(a5=="O")&&(a3=="O")) ){
+      
+        alert("O won")
+    }
+    
+    else if( (a1=="O" || a1=="X") && (a2=="O" || a2=="X") && (a3=="O" || a3=="X") &&
+             (a4=="O" || a4=="X") && (a5=="O" || a5=="X") && (a6=="O" || a6=="X") &&
+             (a7=="O" || a7=="X") && (a8=="O" || a8=="X") && (a9=="O" || a9=="X")) {
+
+                alert("Match Draw")
+    }
+    }
+    </script>
+</html>
